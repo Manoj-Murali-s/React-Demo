@@ -1,0 +1,31 @@
+.btn {
+    display: flex;
+    align-items: stretch;
+
+    flex-direction: column;
+}
+
+span {
+    text-align: center;
+}
+
+button {
+    padding: 1px;
+    margin: 5px;
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+li {
+    padding: 5px;
+}
+
+input {
+    margin: 15px;
+}
+
+
+

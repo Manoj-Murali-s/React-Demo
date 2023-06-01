@@ -1,13 +1,29 @@
 import React from 'react'
+import './Content.css';
+import ItemsList from './ItemsList';
 
-const Content = () => {
-  function handleNameChange() {
-    const name = ['One', 'Two', 'Three', 'Four']
-    const int = Math.floor(Math.random() * 4);
-    return name[int];
-  }
+const Content = (props) => {
+  const { items, handleDelete, handleCheck, setItems } = props
+
   return (
-    <div>Lets Roll {handleNameChange()}</div>
+    <main>
+      {(items.length) ? (
+        <ItemsList
+          items={items}
+          handleDelete={handleDelete}
+          handleCheck={handleCheck}
+          setItems={setItems}
+        />)
+        :
+        (
+          <p style={{ color: "red" }}>
+            'Your list is empty'
+          </p>
+        )}
+    </main>
+
+
+
   )
 }
 
